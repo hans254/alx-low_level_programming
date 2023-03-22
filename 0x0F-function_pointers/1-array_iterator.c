@@ -45,7 +45,7 @@ s2 = "";
 size_1 = _strlen_recursion(s1);
 size_2 = _strlen_recursion(s2);
 limit = (n < size_2) ? n : size_2;
-s3 = malloc(sizeof(char) * (size_1 + limit)+1);
+s3 = malloc(sizeof(char) * (size_1 + limit) +1);
 if (s3 == NULL)
 {
 return (NULL);
