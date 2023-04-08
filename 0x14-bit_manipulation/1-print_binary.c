@@ -1,13 +1,36 @@
+/*
+ * Auth: Hansel Fidel Ndemange
+ * File: 0-binary_to_uint.c
+ */
+
 #include "main.h"
 
 /**
-  * print_binary - prints the binary representation of a numnber
-  * @n: unsigned long, number to be represented in binary
-  */
-
-void print_binary(unsigned long int n)
+ * binary_to_uint - Converts a binary number to an unsigned int.
+ * @b: A pointer to a string of 0 and 1 chars.
+ *
+ * Return: If c is NULL or contains chars not 0 or 1 - 0.
+ *         Otherwise - the converted number.
+ */
+unsigned int binary_to_uint(const char *c)
 {
-	if (n > 1)
-		print_binary(n >> 1);
-	(n & 1) ? _putchar('1') : _putchar('0');
+	unsigned int hans = 0, tas = 1;
+	int len;
+
+	if (c == '\0')
+		return (0);
+
+	for (len = 0; c[len];)
+		len++;
+
+	for (len -= 1; len >= 0; len--)
+	{
+		if (c[len] != '0' && c[len] != '1')
+			return (0);
+
+		hans += (c[len] - '0') * mult;
+		tas *= 2;
+	}
+
+	return (num);
 }
