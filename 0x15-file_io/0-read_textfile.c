@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -9,6 +9,7 @@
  *
  * Return: If the function dont work or filename is NULL - 0.
  *         O/w - the actual number of bytes the function can read and print.
+ *	By Hansel F. Ndemange
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
